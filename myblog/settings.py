@@ -121,7 +121,7 @@ STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+STATIC_ROOT = BASE_DIR / "staticfiles"  # WhiteNoise serves from here
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-STATIC_ROOT = BASE_DIR / "staticfiles"
