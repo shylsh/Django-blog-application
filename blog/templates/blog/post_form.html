@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% if view.object %}Edit Post{% else %}New Post{% endif %}</title>
+  </head>
+  <body>
+    <h2>{% if view.object %}Edit Post{% else %}Create New Post{% endif %}</h2>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <!-- This renders form fields (title & content) -->
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
